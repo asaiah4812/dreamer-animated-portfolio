@@ -114,9 +114,13 @@ const Portfolio = () => {
             </Link>
           ))}
         </div>
-        <button className="py-2 sm:py-3 w-full flex items-center justify-center gap-2 font-medium rounded-full uppercase bg-teal-600 text-white">
+        <a
+          href="/dreamer-resume.pdf"
+          download
+          className="py-2 sm:py-3 w-full flex items-center justify-center gap-2 font-medium rounded-full uppercase bg-teal-600 text-white"
+        >
           download cv <CloudDownload className="animate-pulse" />
-        </button>
+        </a>
       </div>
     </div>
   );

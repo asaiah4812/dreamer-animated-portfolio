@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import { DiDjango } from "react-icons/di";
 import Image from "next/image";
 import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
@@ -94,14 +93,16 @@ export default function HeroSection() {
                 </span>
               </div>
               <div className="mt-12 items-center group gap-2 sm:flex-row">
-                <Link
+                <button
                   className="bg-teal-600 hover:bg-teal-700 transition-all ease-in-out duration-100 text-white rounded-full group-hover:text-slate-200 px-5 py-3"
-                  href="#link"
+                  onClick={() => {
+                    window.location.href = "/dreamer-resume.pdf";
+                  }}
                 >
                   <span className="inline-flex gap-2">
                     Hire me <Handshake className="animate-bounce" />
                   </span>
-                </Link>
+                </button>
               </div>
             </div>
             <div className="rounded-md relative h-[400px] md:w-1/2 overflow-hidden">
