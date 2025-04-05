@@ -14,13 +14,12 @@ export default function LayoutGridDemo() {
 const SkeletonOne = () => {
   return (
     <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        House in the woods
-      </p>
+      <p className="font-bold md:text-4xl text-xl text-white">Eventura</p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A serene and tranquil retreat, this house in the woods offers a peaceful
-        escape from the hustle and bustle of city life.
+        The Event Management Platform is a decentralized application designed to
+        enable users to create, manage, and attend events efficiently and
+        securely. Inspired by platforms like Luma.
       </p>
     </div>
   );
