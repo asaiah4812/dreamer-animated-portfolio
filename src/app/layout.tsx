@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import {Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Cursor from "@/components/Cursor";
 import Portfolio from "@/components/Portfolio";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import { ScrollProvider } from "@/context/RefContext";
+import LoadingAnimation from "@/components/LoadingAnimation";
 
-const poppins = Poppins({
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+const font = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin']
 });
 
 
@@ -25,30 +27,31 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} bg-slate-900 min-h-screen`}
+        className={`${font.className} bg-slate-900 min-h-screen`}
         suppressHydrationWarning
         style={{
           backgroundImage: `url('/back.svg')`,
         }}
       >
+        <LoadingAnimation />
         <ScrollProvider>
-        <Navbar />
-        <Cursor />
-        <main className="grid xl:grid-cols-8 min-h-screen">
-      {/* <div className="fixed inset-0 -inset -z-1 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-background to-background"></div> */}
-          <Portfolio />
-          <div
-            role="main"
-            className="xl:col-span-5 border-x  border-dashed border-slate-600"
-          >
-            {children}
-          </div>
-          <div className="hidden xl:sticky top-0 right-0 xl:col-span-1 h-screen xl:flex items-center justify-center">
-            <Sidebar />
-          </div>
-        </main>
+          <Navbar />
+          <Cursor />
+          <main className="grid xl:grid-cols-8 min-h-screen">
+            <Portfolio />
+            <div
+              role="main"
+              className="xl:col-span-5 border-x border-dashed border-slate-600"
+            >
+              {children}
+            </div>
+            <div className="hidden xl:sticky top-0 right-0 xl:col-span-1 h-screen xl:flex items-center justify-center">
+              <Sidebar />
+            </div>
+          </main>
         </ScrollProvider>
       </body>
     </html>
   );
 }
+

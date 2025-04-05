@@ -1,35 +1,33 @@
-// context/ScrollContext.tsx
 "use client";
-
 import { createContext, useContext, useRef, RefObject } from "react";
 
 type SectionRefs = {
-  home: RefObject<HTMLDivElement>;
-  profile: RefObject<HTMLDivElement>;
-  service: RefObject<HTMLDivElement>;
-  skill: RefObject<HTMLDivElement>;
-  resume: RefObject<HTMLDivElement>;
-  portfolio: RefObject<HTMLDivElement>;
-  blog: RefObject<HTMLDivElement>;
-  contact: RefObject<HTMLDivElement>;
+  home: RefObject<HTMLDivElement | null>;
+  profile: RefObject<HTMLDivElement | null>;
+  service: RefObject<HTMLDivElement | null>;
+  skill: RefObject<HTMLDivElement | null>;
+  resume: RefObject<HTMLDivElement | null>;
+  portfolio: RefObject<HTMLDivElement | null>;
+  blog: RefObject<HTMLDivElement | null>;
+  contact: RefObject<HTMLDivElement | null>;
 };
 
 const ScrollContext = createContext<SectionRefs | null>(null);
 
 export function ScrollProvider({ children }: { children: React.ReactNode }) {
-  const homeRef = useRef<HTMLDivElement>(null);
-  const profileRef = useRef<HTMLDivElement>(null);
-  const serviceRef = useRef<HTMLDivElement>(null);
-  const skillRef = useRef<HTMLDivElement>(null);
-  const resumeRef = useRef<HTMLDivElement>(null);
-  const portfolioRef = useRef<HTMLDivElement>(null);
-  const blogRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
+  const sectionRefs = {
+    home: useRef<HTMLDivElement>(null),
+    profile: useRef<HTMLDivElement>(null),
+    service: useRef<HTMLDivElement>(null),
+    skill: useRef<HTMLDivElement>(null),
+    resume: useRef<HTMLDivElement>(null),
+    portfolio: useRef<HTMLDivElement>(null),
+    blog: useRef<HTMLDivElement>(null),
+    contact: useRef<HTMLDivElement>(null),
+  };
 
   return (
-    <ScrollContext.Provider
-      value={{ homeRef, profileRef, serviceRef, skillRef, resumeRef, portfolioRef, blogRef, contactRef }}
-    >
+    <ScrollContext.Provider value={sectionRefs}>
       {children}
     </ScrollContext.Provider>
   );

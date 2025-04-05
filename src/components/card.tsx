@@ -1,5 +1,4 @@
 "use client"
-import { Codesandbox } from 'lucide-react';
 import React from 'react'
 
 
@@ -13,10 +12,11 @@ const Card = ({
   icon: React.ReactNode;
 }) => {
   return (
-    <main className="container mx-auto mt-7">
-      <section className="py-20 px-12 space-y-10 bg-slate-600/40 backdrop-blur-sm rounded-lg">
+    <main className="container mx-auto mt-7" suppressHydrationWarning>
+      <section className="py-10 md:py-20  px-4 md:px-12 space-y-10 bg-slate-600/40 backdrop-blur-sm rounded-lg">
         <span className="ring-1 px-5 py-1 text-sm rounded-full inline-flex items-center w-fit ring-slate-400 text-slate-50 uppercase">
-          {icon}{title}
+          {icon}
+          {title}
         </span>
         {children}
       </section>
@@ -28,12 +28,13 @@ export default Card
 
 export function GridCard({skill, no, desc, icon}:{skill:string; no:string; desc:string; icon:React.ReactNode}){
   return (
-    <div className="ring-1 ring-[#707070] group rounded-lg p-8 transition-all ease-in-out duration-300 hover:ring-teal-600 hover:shadow-lg hover:shadow-teal-600 hover:scale-105">
+    <div className="ring-1 ring-[#707070] group p-8 transition-all ease-in-out duration-300 hover:ring-teal-600 hover:shadow-lg hover:shadow-teal-600 hover:scale-105">
       <div className="flex gap-5 justify-between">
         <h1
-          className="text-8xl font-bold text-transparent transition-all duration-300"
+          className="text-8xl font-bold text-transparent transition-all duration-300  group-hover:[--stroke-color:rgb(13,148,136)]"
           style={{
-            WebkitTextStroke: "0.5px var(--stroke-color, #707070)", // Uses CSS variable
+            WebkitTextStroke: "0.5px var(--stroke-color, #707070)",
+            WebkitTextStrokeColor: "var(--stroke-color, #707070)",
           }}
         >
           {no}

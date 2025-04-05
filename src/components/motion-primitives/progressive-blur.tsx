@@ -2,14 +2,7 @@
 import { cn } from "@/lib/utils";
 import { type HTMLMotionProps, motion } from "framer-motion";
 
-interface GradProps {
-    top?:number;
-    right?:number;
-    bottom?:number;
-    left?:number;
-}
-
-export const GRADIENT_ANGLES:GradProps[] = {
+export const GRADIENT_ANGLES: Record<string, number> = {
   top: 0,
   right: 90,
   bottom: 180,

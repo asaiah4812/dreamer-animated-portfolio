@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import { DiDjango } from "react-icons/di";
@@ -5,7 +6,7 @@ import Image from "next/image";
 import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 import { ProgressiveBlur } from "@/components/motion-primitives/progressive-blur";
 import { SiPython } from "react-icons/si";
-import { FaReact } from "react-icons/fa6";
+import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiJavascript } from "react-icons/si";
 import { ImHtmlFive } from "react-icons/im";
@@ -15,13 +16,12 @@ import { CgFigma } from "react-icons/cg";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { CheckCheck, Handshake, Home } from "lucide-react";
 
-
 interface Icons {
-    id: number;
-    icon: React.ReactNode;
+  id: number;
+  icon: React.ReactNode;
 }
 
-const Icons = [
+const Icons: Icons[] = [
   {
     id: 1,
     icon: <DiDjango className="text-white text-6xl" />,
@@ -64,42 +64,41 @@ const Icons = [
   },
 ];
 
-
 export default function HeroSection() {
   return (
     <main className="container mx-auto">
-      <section className="py-20 bg-slate-600/40 backdrop-blur-sm rounded-lg">
-        <div className="mx-auto px-4 md:px-6">
+      <section className="py-20 bg-slate-600/40 backdrop-blur-sm rounded-t-lg">
+        <div className="mx-auto px-2 md:px-6">
           <div className="mx-auto flex w-full items-center justify-between gap-12 md:flex-row px-4 xl:px-8">
             <div className="mx-auto md:w-1/2">
               <span className="ring-1 px-5 py-1 text-sm rounded-full inline-flex items-center w-fit ring-slate-400 text-slate-50 uppercase">
                 <Home className="text-teal-500 me-2" size={16} /> introduce
               </span>
-              <h1 className="mt-8 xl:max-w-3xl text-balance text-3xl text-white font-semibold lg:text-4xl lg:mt-16 xl:text-5xl">
+              <h1 className="mt-8 max-w-full xl:max-w-3xl text-balance text-3xl text-white font-semibold lg:text-4xl lg:mt-16 xl:text-5xl">
                 I Code The 🖥️{" "}
                 <span className="text-teal-600">Digital Solution</span>
               </h1>
-              <p className="mt-8 xl:max-w-3xl text-[#999999] text-md">
+              <p className="mt-8 max-w-full xl:max-w-3xl text-[#999999] text-md">
                 A seasoned{" "}
                 <span className="text-white">React Native Developer</span>{" "}
                 specializing in creating efficient, user-friendly applications.
               </p>
-              <div className="flex items-center space-x-4 mt-4">
-                <span className="text-[#999999] text-sm flex items-center gap-2 py-2">
+              <div className="flex items-center space-x-1 sm:space-x-4 mt-4">
+                <span className="text-[#999999] text-xs sm:text-sm flex items-center gap-2 py-2">
                   <CheckCheck className="text-teal-600" />
                   Available for work
                 </span>
-                <span className="text-[#999999] text-sm flex items-center gap-2 py-2">
+                <span className="text-[#999999] text-xs sm:text-sm flex items-center gap-2 py-2">
                   <CheckCheck className="text-teal-600" />
                   Full Time Job
                 </span>
               </div>
-              <div className="mt-12 flex flex-col items-center group gap-2 sm:flex-row">
+              <div className="mt-12 items-center group gap-2 sm:flex-row">
                 <Link
                   className="bg-teal-600 hover:bg-teal-700 transition-all ease-in-out duration-100 text-white rounded-full group-hover:text-slate-200 px-5 py-3"
                   href="#link"
                 >
-                  <span className="text-nowrap flex items-center self-start gap-2">
+                  <span className="inline-flex gap-2">
                     Hire me <Handshake className="animate-bounce" />
                   </span>
                 </Link>
@@ -116,8 +115,8 @@ export default function HeroSection() {
           </div>
         </div>
       </section>
-      <section className="bg-slate-600 hidden md:block">
-        <div className="group relative m-auto max-w-6xl px-6">
+      <section className="bg-slate-600 hidden rounded-b-lg md:block">
+        <div className="group relative m-auto max-w-6xl px-2 md:px-6">
           <div className="flex flex-col items-center md:flex-row">
             <div className="md:max-w-44 md:border-r md:pr-6">
               <p className="text-end text-white text-sm">
