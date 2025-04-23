@@ -35,31 +35,31 @@ const Socials = [
     id: 1,
     name: "Facebook",
     icon: <FaFacebook />,
-    link: "#",
+    link: "https://www.facebook.com/asaiah.henson.7",
   },
   {
     id: 2,
     name: "Linkedin",
     icon: <FaLinkedinIn />,
-    link: "#",
+    link: "https://www.linkedin.com/in/asaiah-henson-440bb62a6/",
   },
   {
     id: 3,
     name: "Twitter",
     icon: <FaTwitter />,
-    link: "#",
+    link: "https://x.com/dreamer_webdev",
   },
   {
     id: 4,
     name: "Instagram",
-    icon:<FaInstagram />,
+    icon: <FaInstagram />,
     link: "#",
   },
   {
     id: 5,
     name: "Behance",
     icon: <FaBehance />,
-    link: "#",
+    link: "https://www.behance.net/asaiahhenson21",
   },
 ];
 
@@ -109,7 +109,7 @@ const Portfolio = () => {
         </div>
         <div className="flex items-center justify-center space-x-2 px-4 sm:px-6 rounded-md py-2 sm:py-3 w-full bg-slate-600/60 text-slate-400">
           {Socials.map((social) => (
-            <Link key={social.id} href={social.link}>
+            <Link key={social.id} target='_blank' href={social.link}>
               {social.icon}
             </Link>
           ))}

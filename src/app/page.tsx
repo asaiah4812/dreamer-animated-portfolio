@@ -195,7 +195,7 @@ export default function Home() {
           title="Blog"
         >
           <h2 className="text-4xl text-white font-semibold">
-            My <span className="text-teal-600 font-bold">Education</span>
+            My <span className="text-teal-600 font-bold">Blogs</span>
           </h2>
 
           <p className="text-[#999999] max-w-xl">

@@ -78,9 +78,12 @@ export default function HeroSection() {
                 <span className="text-teal-600">Digital Solution</span>
               </h1>
               <p className="mt-8 max-w-full xl:max-w-3xl text-[#999999] text-md">
-                A seasoned{" "}
-                <span className="text-white">React Native Developer</span>{" "}
-                specializing in creating efficient, user-friendly applications.
+                I&lsquo;m a{" "}
+                <span className="text-white">Fullstack Webdeveloper</span> with
+                3+ years of experience building and scaling web applications
+                using Python, Django, and REST APIs. I also enjoy working on the
+                full stack—adding a dash of React, Next.js, and TypeScript to
+                bring ideas to life.
               </p>
               <div className="flex items-center space-x-1 sm:space-x-4 mt-4">
                 <span className="text-[#999999] text-xs sm:text-sm flex items-center gap-2 py-2">

@@ -4,29 +4,29 @@ export function AnimatedTestimonialsDemo() {
   const testimonials = [
     {
       quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      name: "Sarah Chen",
-      designation: "Product Manager at TechFlow",
-      src: "/me.jpg",
+        "Working with Asaiah was a game-changer for our SaaS product. They took our rough MVP and transformed it into a scalable, high-performance platform with Django and React. Highly recommend!",
+      name: "Timi Osayamen",
+      designation: "CEO Gradenet ICT",
+      src: "/timi.png",
     },
     {
       quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-      name: "Michael Rodriguez",
-      designation: "CTO at InnovateSphere",
-      src: "/portfolio.jpg",
+        "Asaiah delivered a complex full-stack project under tight deadlines, seamlessly integrating RESTful APIs with a Next.js frontend. Their clean code and problem-solving mindset made them a trusted partner.",
+      name: "John Okeke",
+      designation: "CTO at Sandlip Oasis",
+      src: "/john.jpg",
     },
     {
       quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-      name: "Emily Watson",
+        "I hired Henson to redo my legacy web application with modern tech (Python + TypeScript). Not only did they provide me with a 40% performance improvement but also stunning UI with Figma upfront.",
+      name: "Ruth mamai",
       designation: "Operations Director at CloudScale",
-      src: "/dreamer.jpg",
+      src: "/sarah.jpg",
     },
     {
       quote:
         "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-      name: "James Kim",
+      name: "Emily Watson",
       designation: "Engineering Lead at DataPro",
       src: "/portfolio.jpg",
     },
